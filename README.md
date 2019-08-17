@@ -1,4 +1,5 @@
 # OLAPI
+[![](https://jitpack.io/v/AusseKalega/OLAPI.svg)](https://jitpack.io/#AusseKalega/OLAPI)
 ## Getting started
 
 In your `build.gradle`:
