@@ -21,7 +21,7 @@ allprojects {
 
 ```gradle
  dependencies {
-    compile 'com.github.aussekalega:OpenLocator:1.0'
+    compile 'com.github.AusseKalega:OLAPI:1.0'
     compile "com.google.android.gms:play-services-location:x.x.x"
  }
 ```
