@@ -1,16 +1,4 @@
-# EasyLocation
-
-Getting location updates requires lots of boilerplate code in Android, You need to take care of
-- Google Play services availability Check, Update Google play Service Dialog
-- Creation of GoogleApiClient and its callbacks connected,disconnected etc.
-- Stopping and releasing resources for location updates
-- Handling Location permission scenarios
-- Checking Location services are On or Off
-- Getting last known location is not so easy either
-- Fallback to last known location if not getting location after certain duration
-
-**EasyLocation** does all this stuff in background, so that you can concentrate on your business logic than handling all above
-
+# OLAPI
 ## Getting started
 
 In your `build.gradle`:
@@ -32,12 +20,12 @@ allprojects {
 
 ```gradle
  dependencies {
-    compile 'com.github.vishal259:EasyLocation:1.0'
+    compile 'com.github.aussekalega:OpenLocator:1.0'
     compile "com.google.android.gms:play-services-location:x.x.x"
  }
 ```
 
-Extend your `Activity` from `EasyLocationAppCompatActivity` or `EasyLocationActivity`:
+Extend your `Activity` from `OpenLocatorAppCompatActivity` or `OpenLocatorActivity`:
 
 *Create location request according to your needs*
 
@@ -47,9 +35,9 @@ LocationRequest locationRequest = new LocationRequest()
         .setInterval(5000)
         .setFastestInterval(5000);
 ```                        
-*Create EasyLocation request, and set locationRequest created*
+*Create OpenLocator request, and set locationRequest created*
 ```java
-EasyLocationRequest openLocatorRequest = new EasyLocationRequestBuilder()
+OpenLocatorRequest openLocatorRequest = new OpenLocatorRequestBuilder()
         .setLocationRequest(locationRequest)
         .setFallBackToLastLocationTime(3000)
         .build();
@@ -92,7 +80,7 @@ requestLocationUpdates(openLocatorRequest);
 
 Specify what messages you want to show to user using *EasyLocationRequestBuilder*
 ```java
-EasyLocationRequest openLocatorRequest = new EasyLocationRequestBuilder()
+EasyLocationRequest openLocatorRequest = new OpenLocatorRequestBuilder()
 .setLocationRequest(locationRequest)
 .setLocationPermissionDialogTitle(getString(R.string.location_permission_dialog_title))
 .setLocationPermissionDialogMessage(getString(R.string.location_permission_dialog_message))
@@ -107,7 +95,7 @@ EasyLocationRequest openLocatorRequest = new EasyLocationRequestBuilder()
 
 ## Library License
 
-    Copyright 2016 Vishal Sojitra
+    Copyright 2019 Ausses Kalega
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
