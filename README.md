@@ -21,7 +21,7 @@ allprojects {
 
 ```gradle
  dependencies {
-    compile 'com.github.AusseKalega:OLAPI:1.0'
+    compile 'com.github.AusseKalega:OLAPI:0.1.0'
     compile "com.google.android.gms:play-services-location:x.x.x"
  }
 ```
@@ -79,9 +79,9 @@ requestLocationUpdates(openLocatorRequest);
 
 **Additional Options**
 
-Specify what messages you want to show to user using *EasyLocationRequestBuilder*
+Specify what messages you want to show to user using *OpenLocatorRequestBuilder*
 ```java
-EasyLocationRequest openLocatorRequest = new OpenLocatorRequestBuilder()
+OpenLocatorRequest openLocatorRequest = new OpenLocatorRequestBuilder()
 .setLocationRequest(locationRequest)
 .setLocationPermissionDialogTitle(getString(R.string.location_permission_dialog_title))
 .setLocationPermissionDialogMessage(getString(R.string.location_permission_dialog_message))
