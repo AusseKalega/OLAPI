@@ -96,7 +96,7 @@ OpenLocatorRequest openLocatorRequest = new OpenLocatorRequestBuilder()
 
 ## Library License
 
-    Copyright 2019 Ausses Kalega
+    Copyright 2019 Ausse Kalega
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
